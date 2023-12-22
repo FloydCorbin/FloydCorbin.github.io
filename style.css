@@ -1,0 +1,196 @@
+/* Color Theme Swatches in Hex */
+:root {
+    --sky: #7DABF0;
+    --light-brown: #B0A287;
+    --golden: #F0C97D;
+    --formal-blue: #123A78;
+    --dark-brown: #735210;
+    background-color: var(--sky);
+}
+
+
+html {
+    box-sizing: content-box;
+}
+
+/* Hide scrollbar for Chrome, Safari (didn't work) and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+/* Desktop style */
+.main-content {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.full-width {
+    width: 100vw !important;
+}
+
+.header {
+    position: relative;
+    padding: 0px 10px 10px 10vw;
+    margin: auto;
+    min-height: 170px;
+    min-width: none;
+}
+
+.scrollspy {
+    position: relative;
+    height: 900px;
+    overflow-y: scroll;
+}
+
+.profile-image {
+    display: block;
+    max-width: 120px;
+    float: left;
+    border-radius: 50%;
+}
+
+nav {
+    position: relative;
+}
+
+ul.nav {
+    padding-left: calc(10vw - 16px);
+    display: flex;
+    justify-content: space-between;
+}
+
+
+body {
+    position: relative;
+    min-height: 200px;
+}
+
+section {
+    height: 100vh;
+}
+
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 1.5rem;
+}
+
+.page-title {
+    position: relative;
+    top: 115px;
+    left: -119px;
+    max-width: 120px;
+    padding: 1px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 1rem;
+}
+
+h2 h3 h4 {
+    position: relative;
+    padding: 20px, 20px, 5px, 10px;
+}
+
+.portfolio-card-title {
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 120px !important;
+    font-size: .875rem !important;
+    margin: auto;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.section-button {
+    position: relative;
+    margin: 0 50%;
+}
+
+footer {
+    /* background-image: url('/70215234566__55C7E1C9-7A2B-413E-9DE6-3F19B1CEF042.GIF');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; */
+    position: relative;
+}
+
+.copywright {
+    position: relative;
+    /* bottom: 10px; */
+    margin: auto;
+}
+
+
+/*Skills grid */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "q r s t";
+}
+
+.q {
+    grid-area: q;
+}
+
+.r {
+    grid-area: r;
+}
+
+.s {
+    grid-area: s;
+}
+
+.t {
+    grid-area: t;
+}
+
+/* Portfolio grid */
+.portfolio-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "quality-assurance pm-ba web-development";
+}
+
+.quality-assurance {
+    grid-area: quality-assurance;
+    margin: auto;
+}
+
+.pm-ba {
+    grid-area: pm-ba;
+    margin: auto;
+}
+
+.web-development {
+    grid-area: web-development;
+    margin: auto;
+}
+
+.portfolio-card {
+    position: relative;
+    width: 26vw;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
