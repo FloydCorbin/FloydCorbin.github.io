@@ -1,31 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Floyd Corbin's Profile</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="mask.png" type="image/x-icon">
+
+    <script src="logic.js"></script>
+    <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover">
+    <title>S. Floyd Corbin | Home</title>
 </head>
-<body bgcolor="#e3e6ea">
-	<!-- oh snap cmd + / is a shortcut to entering comments -->
-<h1>Student Bio</h1>
 
+<body>
+    <div id="top"> 
+    
+    <div class="header full-width">
+        <img class="profile-image" src="IMG_3437.jpg" alt="">
 
-<h2><strong>Floyd Corbin</strong></h2>
+        <span class="page-title">
+            <h1>S. Floyd Corbin</h1>
+        </span>
+    </div>
+    <nav id="highlighting_nav" class="full-width navbar sticky-top navbar-light bg-light">
 
- <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/5/005/075/261/1735015.jpg" alt="My ugly mug" width="200px" height="200px" hspace="28">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills_interests">Skills/Interests</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+        </ul>
 
- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
- 
+    </nav>
+</div>
+    <div data-bs-spy="scroll" data-bs-target="#highlighting_nav" data-bs-offset="0" class="scrollspy main-content" tabindex="0">
+        <section id="about">
+            <h2>About</h2>
+            <p>Floyd holds the position of Lead Quality Engineer at Rightpoint. As a quality assurance engineer, Floyd
+                strives to advocate for best practices, fostering internal quality on his projects. He actively engages
+                in project discussions and early-stage planning, aiming to instill a 'shift-left' QA mentality. Floyd
+                meticulously reviews and validates functional requirements against non-functional ones, identifying
+                potential conflicts or risks to the project delivery timeline.</p>
+            <p>Floyd's expertise spans overall project development, including work on AEMaaCS Sites and Assets projects
+                during his tenure at Rightpoint. Noteworthy recent projects include collaborations with companies such
+                as Oneblood.org, Grand Design RV, Pluralsight, and Bungie Interactive.</p>
+            <p>Prior to joining Rightpoint, Floyd contributed his skills at MRM/McCann, where he played a vital role in
+                the PHRMA.org Sitecore 9 Program. This involved managing multiple projects, including a primary site
+                with several micro-sites. Floyd also contributed to a project for the Panasonic Configurator, an
+                application designed to configure the Toughbook line of computers, involving intensive business logic
+                testing.</p>
+            <p>Before his time at MRM/McCann, Floyd served as a Project Manager/Business Analyst for the State of Utah,
+                working on various projects for the Prescription Drug Monitoring Program (PMP) Interconnect application.
+                His responsibilities included leading a project to connect Utah's PMP to all other U.S. states.</p>
+        </section>
+        <section id="skills_interests">
+            <h2>Skills/Interests</h2>
+            <p>Floyd is a certified Scrum Master and has experience with Agile methodologies. He is also a certified
+                Sitecore 9 Developer and has experience with Sitecore 9. Floyd is also a certified AEMaaCS Practioner
+                and has experience with AEMaaCS Sites and Assets. Additionaly skills include:</p>
 
- 
-
-	<h2><strong>Contact Info</strong></h2>
-	<div class="divFive">
-
- <ul>
- 	<li><strong>Emial:</strong> <a href="Floyd.Corbin@gmail.com">Floyd.Corbin@gmail.com</a></li>
- 	<li><strong>Github:</strong> <a href="https://github.com/FloydCorbin">FloydCorbin</a></li>
- 	<li><strong>Portfolio:</strong> <a href="http://www.google.com">Coming Soon</a></li>
- </ul>
-
+            <div class="skills-container">
+                <div class="q">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>jQuery</li>
+                        <li>Bootstrap</li>
+                        <li>Node.js</li>
+                        <li>JMeter</li>
+                        <li>Selenium</li>
+                    </ul>
+                </div>
+                <div class="r">
+                    <ul>
+                        <li>MySQL</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Visual Studio Code</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe XD</li>
+                    </ul>
+                </div>
+                <div class="s">
+                    <ul>
+                        <li>Microsoft Office</li>
+                        <li>Microsoft Visio</li>
+                        <li>Microsoft SharePoint</li>
+                        <li>Microsoft Teams</li>
+                        <li>Microsoft OneDrive</li>
+                        <li>Microsoft OneNote</li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <ul>
+                        <li>Microsoft Outlook</li>
+                        <li>Microsoft Word</li>
+                        <li>Microsoft Excel</li>
+                        <li>Microsoft PowerPoint</li>
+                        <li>Microsoft Access</li>
+                        <li>Microsoft Publisher</li>
+                        <li>Microsoft Azure</li>
+                    </ul>
+                </div>
+        </section>
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <p>Here are some of the projects Floyd has worked on:</p>
+            <div class="portfolio-container">
+                <div class="quality-assurance">
+                    <img class="portfolio-card" src="/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="">
+                    <span class="portfolio-card-title"><h3>Quality Assurance</h3></span>
+                </div>
+                <div class="pm-ba">
+                    <img class="portfolio-card" src="/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
+                    <span class="portfolio-card-title"><h3>Project Management / Business Analysis</h3></span>
+                </div>
+                <div class="web-development">
+                    <img class="portfolio-card" src="/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="">
+                    <span class="portfolio-card-title"><h3>Development</h3></span>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span class="copywright">
+                <p>Copywright 2023 </p>
+            </span>
+        </footer>
+    </div>
 
 </body>
+
 </html>
