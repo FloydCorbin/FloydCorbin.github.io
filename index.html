@@ -6,16 +6,22 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="mask.png" type="image/x-icon">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ebc942">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <script src="logic.js"></script>
     <!-- Bootstrap JS (Popper.js and Bootstrap JS) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <link rel="stylesheet" href="style.css">
 
 
 
@@ -25,35 +31,36 @@
 </head>
 
 <body>
-    <div id="top"> 
-    
-    <div class="header full-width">
-        <img class="profile-image" src="IMG_3437.jpg" alt="">
+    <div id="top">
 
-        <span class="page-title">
-            <h1>S. Floyd Corbin</h1>
-        </span>
+        <div class="header full-width">
+            <img class="profile-image" src="IMG_3437.jpg" alt="">
+
+            <span class="page-title">
+                <h1>S. Floyd Corbin</h1>
+            </span>
+        </div>
+        <nav id="highlighting_nav" class="full-width navbar sticky-top">
+
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills_interests">Skills/Interests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#portfolio">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#blog">Blog</a>
+                </li>
+            </ul>
+
+        </nav>
     </div>
-    <nav id="highlighting_nav" class="full-width navbar sticky-top navbar-light bg-light">
-
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-                <a class="nav-link" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#skills_interests">Skills/Interests</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-        </ul>
-
-    </nav>
-</div>
-    <div data-bs-spy="scroll" data-bs-target="#highlighting_nav" data-bs-offset="0" class="scrollspy main-content" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#highlighting_nav" data-bs-offset="0" class="scrollspy main-content"
+        tabindex="0">
         <section id="about">
             <h2>About</h2>
             <p>Floyd holds the position of Lead Quality Engineer at Rightpoint. As a quality assurance engineer, Floyd
@@ -75,9 +82,8 @@
         </section>
         <section id="skills_interests">
             <h2>Skills/Interests</h2>
-            <p>Floyd is a certified Scrum Master and has experience with Agile methodologies. He is also a certified
-                Sitecore 9 Developer and has experience with Sitecore 9. Floyd is also a certified AEMaaCS Practioner
-                and has experience with AEMaaCS Sites and Assets. Additionaly skills include:</p>
+            <p>Floyd has experience in Sitecore 9 and AEMaaCS Sites and Assets. He is also a certified AEMaaCS Business
+                Practitioner.Additionaly skills include:</p>
 
             <div class="skills-container">
                 <div class="q">
@@ -131,23 +137,32 @@
             <div class="portfolio-container">
                 <div class="quality-assurance">
                     <img class="portfolio-card" src="/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="">
-                    <span class="portfolio-card-title"><h3>Quality Assurance</h3></span>
+                    <span>
+                        <h3 class="portfolio-card-title">Quality Assurance</h3>
+                    </span>
                 </div>
                 <div class="pm-ba">
                     <img class="portfolio-card" src="/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
-                    <span class="portfolio-card-title"><h3>Project Management / Business Analysis</h3></span>
+                    <span>
+                        <h3 class="portfolio-card-title">PM / BA</h3>
+                    </span>
                 </div>
                 <div class="web-development">
                     <img class="portfolio-card" src="/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="">
-                    <span class="portfolio-card-title"><h3>Development</h3></span>
+                    <span>
+                        <h3 class="portfolio-card-title">Development</h3>
+                    </span>
                 </div>
             </div>
         </section>
-        <footer>
-            <span class="copywright">
-                <p>Copywright 2023 </p>
-            </span>
-        </footer>
+        <section id="blog">
+            <h2>Blog</h2>
+            <footer>
+                <span class="copywright">
+                    <p>Copywright 2023 </p>
+                </span>
+            </footer>
+        </section>
     </div>
 
 </body>
