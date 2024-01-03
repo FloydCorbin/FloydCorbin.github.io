@@ -59,6 +59,24 @@ body {
     overflow-y: scroll;
 }
 
+/* TODO */
+#quote {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    max-width: 500px;
+    padding: 1px;
+    margin: auto;
+}
+#author {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    max-width: 500px;
+    padding: 1px;
+    margin: auto;
+}
+
 .profile-image {
     display: block;
     max-width: 120px;
