@@ -26,13 +26,13 @@ $.ajax({
   method: "GET"
 }).then(function (response) {
   quotes = response;
+//create a variable x that generates a random number between 0 and 9
+  var x = Math.floor(Math.random() * 10);
 
-  quote = quotes[0].text;
-  author = quotes[0].author;
+  quote = quotes[x].text;
+  author = quotes[x].author;
   $("#quote").text(quote);
   $("#author").text(author);
-
-  console.log(quotes);
 });
 
 
