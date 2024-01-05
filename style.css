@@ -1,10 +1,11 @@
 /* Color Theme Swatches in Hex */
 :root {
-    --sky: #EBC942;
+    --sky: #3669C4;
     --light-brown: #B57A33;
-    --golden: #3669C4;
+    --golden: #EBC942;
     --formal-blue: #363B45;
     --soft-brown: #DED4AD;
+    --white: #eeeeee;
     background-color: 
         radial-gradient(ellipse at top, #E2DCC2, transparent),
         radial-gradient(ellipse at bottom, #3669C4, transparent);
@@ -28,7 +29,7 @@ body {
     scrollbar-width: none;
     position: relative;
     min-height: 200px;
-    background-color: var(--soft-brown);
+    background-color: var(--white);
 
 }
 
@@ -37,7 +38,7 @@ body {
     max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--soft-brown);
+    background-color: var(--white);
 }
 
 .full-width {
@@ -48,9 +49,9 @@ body {
     position: relative;
     padding: 0px 10px 10px 10vw;
     margin: auto;
-    min-height: 170px;
+    min-height: 120px;
     min-width: none;
-    background-color: var(--golden);
+    background-color: var(--sky);
 }
 
 .scrollspy {
@@ -59,22 +60,48 @@ body {
     overflow-y: scroll;
 }
 
-/* TODO */
+
 #quote {
+    color: var(--formal-blue);
+    font-weight: 800;
+    font: 1.5em sans-serif;
     position: relative;
     top: 50px;
-    left: 50px;
+    max-width: 50vw;
+    padding: 1px;
+    margin: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+#author {
+    color: var(--formal-blue);
+    font-weight: 800;
+    font: 1.25em sans-serif;
+    position: relative;
+    top: 50px;
     max-width: 500px;
     padding: 1px;
     margin: auto;
 }
-#author {
+
+#author::before {
+    content: "- ";
+}
+
+#quote::before {
+    content: "“";
+    font-weight: 1200;
+}
+
+.quote-area {
     position: relative;
-    top: 50px;
-    left: 50px;
-    max-width: 500px;
+    top: 100px;
     padding: 1px;
     margin: auto;
+    min-height: 200px;
+    min-width: none;
+    background-color: var(--soft-brown);
+    border-radius: 65%;
 }
 
 .profile-image {
@@ -82,12 +109,12 @@ body {
     max-width: 120px;
     float: left;
     border-radius: 50%;
-    border: #363B45 solid 2px;
+    border: var(--formal-blue) solid 2px;
 }
 
 nav {
     position: relative;
-    background-color: var(--sky);
+    background-color: var(--golden);
 }
 
 ul.nav {
@@ -110,22 +137,23 @@ p {
 
 .page-title {
     position: relative;
-    top: 115px;
-    left: -119px;
-    max-width: 120px;
+    top: 20px;
+    left: 35px;
     padding: 1px;
     margin: auto;
-}
+} 
+   
 
 h1 {
-    font-size: 1rem;
+    font-size: 4rem;
     font-weight: bold;
     color: white;
 }
 
 h2 h3 h4 {
     position: relative;
-    padding: 20px, 20px, 5px, 10px;
+    margin-top: 40px;
+    padding: 40px, 20px, 5px, 10px;
 }
 
 .portfolio-card-title {
@@ -211,6 +239,9 @@ footer {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 100%; /* This will make the image take the full width of the .portfolio-card */
+    height: 200px; /* This will maintain the aspect ratio of the image */
+    object-fit: cover; /* This will ensure that the image covers the whole area of the .portfolio-card */
 }
 
 .portfolio-card:hover {
