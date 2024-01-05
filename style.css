@@ -99,7 +99,7 @@ body {
 
 #quote::before {
     content: "“";
-    font-weight: 1200;
+    font-size: 3rem;
 }
 
 .quote-area {
@@ -262,6 +262,20 @@ footer {
 }
 .portfolio-card-title:visited {
     color: var(--formal-blue);
+}
+
+.under-construction-image 
+/*image is 50% of screen and centered*/
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    width: 50vw; /* This will make the image take the full width of the .portfolio-card */
+    /* height: 200px; This will maintain the aspect ratio of the image */
+    object-fit: cover; /* This will ensure that the image covers the whole area of the .portfolio-card */
 }
 
 @media screen and (max-width: 1040px) {
