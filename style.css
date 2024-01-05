@@ -54,6 +54,15 @@ body {
     background-color: var(--sky);
 }
 
+.contact-image {
+    display: block;
+    position: relative;
+    right: 5vw;
+    max-width: 300px;
+    float: right;
+    border-radius: 5%;
+    border: var(--formal-blue) solid 2px;
+}
 .scrollspy {
     position: relative;
     height: 900px;
@@ -125,6 +134,7 @@ ul.nav {
 
 section {
     position: relative;
+    padding-top: 80px;
     margin: auto;
     min-height: 100vh;
     min-width: none;
