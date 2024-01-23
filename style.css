@@ -1,11 +1,14 @@
 /* Color Theme Swatches in Hex */
 :root {
+    /*normal*/
     --sky: #3669C4;
     --light-brown: #B57A33;
     --golden: #EBC942;
     --formal-blue: #363B45;
     --soft-brown: #DED4AD;
     --white: #eeeeee;
+
+
     background-color: 
         radial-gradient(ellipse at top, #E2DCC2, transparent),
         radial-gradient(ellipse at bottom, #3669C4, transparent);
@@ -137,7 +140,6 @@ section {
     padding-top: 80px;
     margin: auto;
     min-height: 100vh;
-    min-width: none;
 }
 
 p {
