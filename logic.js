@@ -36,8 +36,18 @@ $.ajax({
 });
 
 
+// mobile nav
+document.onresize = function () {
+  if (visualViewport.width <= 320) {
+    $("#mobile-nav").show();
+    $("#highlighting-nav").hide();
+    
+  } else {
+    $("#mobile-nav").hide();
+    $("#highlighting-nav").show();
+  }
 
-
-  
-
-
+  // $("#mobile-nav").click(function () {
+  //   $("#highlighting-nav").toggle();
+  // });
+};

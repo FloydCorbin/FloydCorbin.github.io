@@ -9,7 +9,7 @@
     --white: #eeeeee;
 
 
-    background-color: 
+    background-color:
         radial-gradient(ellipse at top, #E2DCC2, transparent),
         radial-gradient(ellipse at bottom, #3669C4, transparent);
 }
@@ -66,6 +66,7 @@ body {
     border-radius: 5%;
     border: var(--formal-blue) solid 2px;
 }
+
 .scrollspy {
     position: relative;
     height: 900px;
@@ -85,6 +86,7 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
+
 #author {
     color: var(--formal-blue);
     font-weight: 800;
@@ -129,6 +131,22 @@ nav {
     background-color: var(--golden);
 }
 
+.nav-link {
+    color: var(--formal-blue);
+    font-weight: 600;
+}
+
+.nav-link.active {
+    background-color: var(--sky);
+    !important;
+
+}
+
+.nav-link:hover {
+    color: var(--sky);
+    text-shadow: #eeeeee 2px 0px 5px;
+}
+
 ul.nav {
     padding-left: calc(10vw - 16px);
     display: flex;
@@ -153,8 +171,8 @@ p {
     left: 35px;
     padding: 1px;
     margin: auto;
-} 
-   
+}
+
 
 h1 {
     font-size: 4rem;
@@ -179,7 +197,7 @@ h2 h3 h4 {
 }
 
 footer {
-    position:absolute;
+    position: absolute;
     bottom: 0;
     left: 30%;
 }
@@ -251,36 +269,96 @@ footer {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    width: 100%; /* This will make the image take the full width of the .portfolio-card */
-    height: 200px; /* This will maintain the aspect ratio of the image */
-    object-fit: cover; /* This will ensure that the image covers the whole area of the .portfolio-card */
+    width: 100%;
+    /* This will make the image take the full width of the .portfolio-card */
+    height: 200px;
+    /* This will maintain the aspect ratio of the image */
+    object-fit: cover;
+    /* This will ensure that the image covers the whole area of the .portfolio-card */
 }
 
 .portfolio-card:hover {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
+
 .portfolio-card-title:hover {
     color: var(--sky);
 }
+
 .portfolio-card-title:visited {
     color: var(--formal-blue);
 }
 
-.under-construction-image 
+.under-construction-image
+
 /*image is 50% of screen and centered*/
-{
+    {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    width: 50vw; /* This will make the image take the full width of the .portfolio-card */
-    /* height: 200px; This will maintain the aspect ratio of the image */
-    object-fit: cover; /* This will ensure that the image covers the whole area of the .portfolio-card */
+    width: 25vw;
+    padding: 40px;
+    object-fit: cover;
+    opacity: .5;
 }
 
-@media screen and (max-width: 1040px) {
+/* Media Queries for 320px (for mobile phones), 768px (for tablets), and 1920px (for desktop computers)*/
+@media screen and (min-width: 1920px) {
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "web-development quality-assurance"
+            "web-development pm-ba";
+    }
+
+    .portfolio-card.lead-card {
+        width: 46vw;
+        height: fit-content;
+        margin: auto;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        object-fit: cover;
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px 10px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "q r"
+            "s t";
+    }
+
+    .page-title {
+        top: 7%;
+        left: 4%;
+        padding: 1px;
+        margin: auto;
+    }
+
+
+    h1 {
+        font-size: 6rem;
+        font-weight: bold;
+        color: white;
+    }
+
+    h2 h3 h4 {
+        margin-top: 40px;
+        padding: 40px, 20px, 5px, 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
     .portfolio-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -291,7 +369,7 @@ footer {
             "quality-assurance pm-ba"
             "web-development web-development";
     }
-    
+
     .skills-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -299,12 +377,12 @@ footer {
         gap: 10px 10px;
         grid-auto-flow: row;
         grid-template-areas:
-            "q r" 
+            "q r"
             "s t";
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 320px) {
     .portfolio-container {
         display: grid;
         grid-template-columns: 1fr;
@@ -316,4 +394,34 @@ footer {
             "pm-ba"
             "web-development";
     }
+
+    section {
+        padding-top: 0px;
+        height: 100%;
+    }
+
+    .page-title {
+        left: 25px;
+        padding: 0px;
+        font-size: 32px;
+    }
+
+    .main-content {
+        max-width: 75vw;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: var(--white);
+    }
+
+    .scrollspy {
+        position: relative;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+ .small-mobile  {
+    display: none;
+ }
 }
+
+
