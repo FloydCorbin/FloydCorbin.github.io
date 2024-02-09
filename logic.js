@@ -1,3 +1,5 @@
+import WORDNIK_API_KEY from './.env'
+console.log(WORDNIK_API_KEY);
 
 //capture the scroll event on the page and hide the image with the id of "logo" when the scroll position is greater than 5px
 $(window).scroll(function () {
@@ -50,10 +52,12 @@ var apis4librarians_wordnikofdaySimple = function(){function reqListener() {
   oReq.addEventListener("load", reqListener);
   oReq.open(
   "GET",
-  "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=YOUR_API_KEY_HERE"
+  "http://api.wordnik.com:80/v4/words.json/wordOfTheDay?api_key=" + WORDNIK_API_KEY
   );
   oReq.send();
   }();
+
+apis4librarians_wordnikofdaySimple;
 
 
   

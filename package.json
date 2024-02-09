@@ -1,0 +1,19 @@
+{
+  "name": "floydcorbin.github.io",
+  "version": "1.0.0",
+  "description": "portfolio and personal interest website",
+  "main": "logic.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FloydCorbin/FloydCorbin.github.io.git"
+  },
+  "author": "Floyd Corbin with help from Copilot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FloydCorbin/FloydCorbin.github.io/issues"
+  },
+  "homepage": "https://github.com/FloydCorbin/FloydCorbin.github.io#readme"
+}
