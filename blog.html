@@ -31,13 +31,24 @@
 </head>
 
 <body>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("themePreference") === "high-contrast") {
+                    document.body.setAttribute("data-theme", "high-contrast");
+                }
+            } catch (error) {
+                // If storage is unavailable, fall back to the default theme.
+            }
+        }());
+    </script>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="top">
         <header class="header full-width">
             <img class="profile-image" src="IMG_3437.jpg" alt="Portrait of S. Floyd Corbin">
             <h1 class="page-title">S. Floyd Corbin</h1>
         </header>
-        <nav id="highlighting_nav" class="full-width navbar sticky-top navbar-light bg-light" aria-label="Primary navigation">
+        <nav id="highlighting-nav" class="full-width navbar sticky-top navbar-light bg-light" aria-label="Primary navigation">
             <ul class="nav nav-pills">
                 <li class="nav-item">
                     <a class="nav-link" href="/index.html">Home</a>
@@ -52,6 +63,8 @@
                     <a class="nav-link" href="blog.html" aria-current="page">Blog</a>
                 </li>
             </ul>
+            <button type="button" class="nav-link contrast-toggle" data-contrast-toggle aria-pressed="false"
+                aria-label="Enable high contrast mode">High contrast</button>
         </nav>
     </div>
 

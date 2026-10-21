@@ -10,6 +10,18 @@
     --shadow: rgba(31, 42, 55, 0.18);
 }
 
+body[data-theme="high-contrast"] {
+    --sky: #0d0d0d;
+    --sky-soft: #fff2b8;
+    --golden: #ffd24a;
+    --formal-blue: #121212;
+    --soft-brown: #f7f1e6;
+    --white: #ffffff;
+    --surface: #ffffff;
+    --border: rgba(18, 18, 18, 0.45);
+    --shadow: rgba(18, 18, 18, 0.26);
+}
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -114,6 +126,14 @@ nav {
     border-bottom: 1px solid rgba(31, 42, 55, 0.08);
 }
 
+#highlighting-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
 .nav {
     display: flex;
     flex-wrap: wrap;
@@ -145,6 +165,27 @@ nav {
 }
 
 .nav-link.active {
+    background-color: var(--sky);
+    color: var(--white);
+}
+
+.contrast-toggle {
+    border: 1px solid rgba(18, 18, 18, 0.2);
+    background-color: var(--surface);
+    color: var(--formal-blue);
+    cursor: pointer;
+    font: inherit;
+    margin: 0.5rem clamp(1rem, 6vw, 5rem) 0.5rem 0;
+}
+
+body[data-theme="high-contrast"] .contrast-toggle {
+    background-color: var(--formal-blue);
+    border-color: var(--formal-blue);
+    color: var(--white);
+}
+
+body[data-theme="high-contrast"] .contrast-toggle:hover,
+body[data-theme="high-contrast"] .contrast-toggle:focus-visible {
     background-color: var(--sky);
     color: var(--white);
 }
@@ -417,6 +458,23 @@ img:focus-visible {
     color: var(--sky);
 }
 
+.dropdown-menu .contrast-toggle {
+    width: 100%;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    text-align: left;
+    padding: 0.5rem 1rem;
+    color: var(--formal-blue);
+}
+
+.dropdown-menu .contrast-toggle:hover,
+.dropdown-menu .contrast-toggle:focus-visible {
+    background-color: var(--sky-soft);
+    color: var(--sky);
+}
+
 footer {
     position: relative;
     margin-top: 2rem;
@@ -445,7 +503,7 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    #highlighting_nav {
+    #highlighting-nav {
         display: none;
     }
 

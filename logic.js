@@ -108,10 +108,10 @@ function updateNavigationVisibility() {
 
   if (viewportWidth <= 768) {
     $("#mobile-nav").show();
-    $("#highlighting_nav").hide();
+    $("#highlighting-nav").hide();
   } else {
     $("#mobile-nav").hide();
-    $("#highlighting_nav").show();
+    $("#highlighting-nav").show();
   }
 }
 
@@ -122,4 +122,39 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".current-year").forEach(function (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   });
+
+  function updateContrastToggleState() {
+    var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
+    document.querySelectorAll("[data-contrast-toggle]").forEach(function (toggleButton) {
+      toggleButton.setAttribute("aria-pressed", String(isHighContrast));
+      toggleButton.setAttribute("aria-label", isHighContrast ? "Disable high contrast mode" : "Enable high contrast mode");
+      toggleButton.textContent = isHighContrast ? "Normal contrast" : "High contrast";
+    });
+  }
+
+  function toggleContrastMode() {
+    var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
+    if (isHighContrast) {
+      document.body.removeAttribute("data-theme");
+      try {
+        localStorage.removeItem("themePreference");
+      } catch (error) {
+        // Ignore storage access errors when toggling off the theme.
+      }
+    } else {
+      document.body.setAttribute("data-theme", "high-contrast");
+      try {
+        localStorage.setItem("themePreference", "high-contrast");
+      } catch (error) {
+        // Ignore storage access errors when toggling on the theme.
+      }
+    }
+    updateContrastToggleState();
+  }
+
+  document.querySelectorAll("[data-contrast-toggle]").forEach(function (toggleButton) {
+    toggleButton.addEventListener("click", toggleContrastMode);
+  });
+
+  updateContrastToggleState();
 });
