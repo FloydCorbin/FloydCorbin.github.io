@@ -248,21 +248,49 @@ img:focus-visible {
 }
 
 .skills-container {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .portfolio-container {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.q,
-.r,
-.s,
-.t,
+.skill-group,
 .quality-assurance,
 .pm-ba,
 .web-development {
     min-width: 0;
+}
+
+.skill-group {
+    padding: 1.25rem 1.25rem 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 10px 22px rgba(31, 42, 55, 0.06);
+}
+
+.skill-group h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.skill-group ul,
+.interest-list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+.interests-container {
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.55);
+}
+
+.interests-container h3 {
+    margin-bottom: 0.5rem;
 }
 
 .portfolio-card {
