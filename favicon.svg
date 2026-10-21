@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Floyd Corbin favicon</title>
+  <desc>A stylized red F monogram with a cyan looping path and circular accents.</desc>
+  <defs>
+    <linearGradient id="redFill" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ff4a4a"/>
+      <stop offset="52%" stop-color="#f8062f"/>
+      <stop offset="100%" stop-color="#bf0d20"/>
+    </linearGradient>
+    <linearGradient id="cyanStroke" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#a8efff"/>
+      <stop offset="50%" stop-color="#3bd9ff"/>
+      <stop offset="100%" stop-color="#12bfdc"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="#050505"/>
+
+  <path
+    d="M46 46 L46 466 H166 V322 H322 C398 322 444 278 444 216 C444 150 396 106 318 106 H166 V46 Z"
+    fill="url(#redFill)"
+    stroke="#f4f4f4"
+    stroke-width="18"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M186 236 C218 178 272 150 331 157 C385 164 424 203 426 250 C428 296 399 333 354 358 C321 378 286 384 259 404 C228 430 202 459 186 480"
+    fill="none"
+    stroke="url(#cyanStroke)"
+    stroke-width="22"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <circle cx="158" cy="232" r="36" fill="#21c7ef" stroke="#f7f7f7" stroke-width="12"/>
+  <circle cx="270" cy="160" r="36" fill="#21c7ef" stroke="#f7f7f7" stroke-width="12"/>
+  <circle cx="344" cy="344" r="36" fill="#21c7ef" stroke="#f7f7f7" stroke-width="12"/>
+</svg>
