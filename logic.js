@@ -123,8 +123,13 @@ document.addEventListener("DOMContentLoaded", function () {
     yearElement.textContent = new Date().getFullYear();
   });
 
+  function isHighContrastThemeEnabled() {
+    return document.documentElement.getAttribute("data-theme") === "high-contrast" ||
+      document.body.getAttribute("data-theme") === "high-contrast";
+  }
+
   function updateContrastToggleState() {
-    var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
+    var isHighContrast = isHighContrastThemeEnabled();
     document.querySelectorAll("[data-contrast-toggle]").forEach(function (toggleButton) {
       toggleButton.setAttribute("aria-pressed", String(isHighContrast));
       toggleButton.setAttribute("aria-label", isHighContrast ? "Disable high contrast mode" : "Enable high contrast mode");
@@ -133,8 +138,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function toggleContrastMode() {
-    var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
+    var isHighContrast = isHighContrastThemeEnabled();
     if (isHighContrast) {
+      document.documentElement.removeAttribute("data-theme");
       document.body.removeAttribute("data-theme");
       try {
         localStorage.removeItem("themePreference");
@@ -142,6 +148,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // Ignore storage access errors when toggling off the theme.
       }
     } else {
+      document.documentElement.setAttribute("data-theme", "high-contrast");
       document.body.setAttribute("data-theme", "high-contrast");
       try {
         localStorage.setItem("themePreference", "high-contrast");

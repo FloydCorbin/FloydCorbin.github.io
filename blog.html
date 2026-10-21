@@ -35,6 +35,7 @@
         (function () {
             try {
                 if (localStorage.getItem("themePreference") === "high-contrast") {
+                    document.documentElement.setAttribute("data-theme", "high-contrast");
                     document.body.setAttribute("data-theme", "high-contrast");
                 }
             } catch (error) {
