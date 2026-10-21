@@ -179,8 +179,10 @@ img:focus-visible {
     text-decoration: none;
 }
 
-.skip-link:focus {
+.skip-link:focus,
+.skip-link:focus-visible {
     left: 1rem;
+    color: var(--white);
 }
 
 #quote,

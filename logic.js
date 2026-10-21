@@ -25,14 +25,23 @@ $.ajax({
   url: "https://stoic-quotes.com/api/quotes",
   method: "GET"
 }).then(function (response) {
-  quotes = response;
-//create a variable x that generates a random number between 0 and 9
-  var x = Math.floor(Math.random() * 10);
+  quotes = Array.isArray(response) ? response : [];
+  if (!quotes.length) {
+    $("#quote").text("Stay curious, keep learning.");
+    $("#author").text("Floyd Corbin");
+    return;
+  }
 
-  quote = quotes[x].text;
-  author = quotes[x].author;
+  var x = Math.floor(Math.random() * quotes.length);
+  var selectedQuote = quotes[x] || {};
+
+  quote = selectedQuote.text || "Stay curious, keep learning.";
+  author = selectedQuote.author || "Floyd Corbin";
   $("#quote").text(quote);
   $("#author").text(author);
+}).fail(function () {
+  $("#quote").text("Stay curious, keep learning.");
+  $("#author").text("Floyd Corbin");
 });
 
 
