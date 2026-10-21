@@ -40,7 +40,7 @@ $.ajax({
 function updateNavigationVisibility() {
   var viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-  if (viewportWidth <= 320) {
+  if (viewportWidth <= 768) {
     $("#mobile-nav").show();
     $("#highlighting_nav").hide();
   } else {
