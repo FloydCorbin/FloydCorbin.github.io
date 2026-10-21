@@ -28,7 +28,7 @@ const stoicQuotes = [
     source: "Meditations, 10.16"
   },
   {
-    quote: "The best way of avenging thyself is not to become like the wrong doer.",
+    quote: "The best way of avenging thyself is not to become like the wrongdoer.",
     author: "Marcus Aurelius",
     source: "Meditations, 6.6"
   },
