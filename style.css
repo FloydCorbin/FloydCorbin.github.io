@@ -346,7 +346,8 @@ img:focus-visible {
 
 .interest-list {
     display: grid;
-    gap: 0.6rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.6rem 1.2rem;
     list-style: none;
     padding-left: 0;
     line-height: 1.6;
@@ -355,6 +356,7 @@ img:focus-visible {
 .interest-list li {
     position: relative;
     padding-left: 1.35rem;
+    break-inside: avoid;
 }
 
 .interest-list li::before {
