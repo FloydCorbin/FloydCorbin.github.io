@@ -43,6 +43,17 @@
 </head>
 
 <body>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("themePreference") === "high-contrast") {
+                    document.body.setAttribute("data-theme", "high-contrast");
+                }
+            } catch (error) {
+                // If storage is unavailable, fall back to the default theme.
+            }
+        }());
+    </script>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="top">
 
@@ -77,6 +88,9 @@
                 </li>
             </ul>
 
+            <button type="button" class="nav-link contrast-toggle" data-contrast-toggle aria-pressed="false"
+                aria-label="Enable high contrast mode">High contrast</button>
+
             <!-- Mobile -->
             <div id="mobile-nav" class="dropdown small-mobile">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
@@ -89,6 +103,10 @@
                     <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
                     <li><a class="dropdown-item" href="#contact">Contact</a></li>
                     <li><a class="dropdown-item" href="#blog">Blog</a></li>
+                    <li>
+                        <button type="button" class="dropdown-item contrast-toggle" data-contrast-toggle aria-pressed="false"
+                            aria-label="Enable high contrast mode">High contrast</button>
+                    </li>
                 </ul>
             </div>
 

@@ -65,4 +65,38 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".current-year").forEach(function (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   });
+
+  var storedTheme = localStorage.getItem("themePreference");
+  if (storedTheme === "high-contrast") {
+    document.body.setAttribute("data-theme", "high-contrast");
+  } else {
+    document.body.removeAttribute("data-theme");
+  }
+
+  function updateContrastToggleState() {
+    var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
+    document.querySelectorAll("[data-contrast-toggle]").forEach(function (toggleButton) {
+      toggleButton.setAttribute("aria-pressed", String(isHighContrast));
+      toggleButton.setAttribute("aria-label", isHighContrast ? "Disable high contrast mode" : "Enable high contrast mode");
+      toggleButton.textContent = isHighContrast ? "Normal contrast" : "High contrast";
+    });
+  }
+
+  function toggleContrastMode() {
+    var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
+    if (isHighContrast) {
+      document.body.removeAttribute("data-theme");
+      localStorage.removeItem("themePreference");
+    } else {
+      document.body.setAttribute("data-theme", "high-contrast");
+      localStorage.setItem("themePreference", "high-contrast");
+    }
+    updateContrastToggleState();
+  }
+
+  document.querySelectorAll("[data-contrast-toggle]").forEach(function (toggleButton) {
+    toggleButton.addEventListener("click", toggleContrastMode);
+  });
+
+  updateContrastToggleState();
 });

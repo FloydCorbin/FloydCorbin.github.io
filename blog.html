@@ -31,6 +31,17 @@
 </head>
 
 <body>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem("themePreference") === "high-contrast") {
+                    document.body.setAttribute("data-theme", "high-contrast");
+                }
+            } catch (error) {
+                // If storage is unavailable, fall back to the default theme.
+            }
+        }());
+    </script>
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="top">
         <header class="header full-width">
@@ -52,6 +63,8 @@
                     <a class="nav-link" href="blog.html" aria-current="page">Blog</a>
                 </li>
             </ul>
+            <button type="button" class="nav-link contrast-toggle" data-contrast-toggle aria-pressed="false"
+                aria-label="Enable high contrast mode">High contrast</button>
         </nav>
     </div>
 
