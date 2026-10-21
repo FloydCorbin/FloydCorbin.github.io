@@ -259,22 +259,30 @@ img:focus-visible {
 }
 
 .skill-group {
-    padding: 1.25rem 1.25rem 0.5rem;
+    padding: 1.35rem 1.35rem 0.75rem;
     border: 1px solid var(--border);
     border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.6);
-    box-shadow: 0 10px 22px rgba(31, 42, 55, 0.06);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(234, 241, 255, 0.7));
+    box-shadow: 0 14px 28px rgba(31, 42, 55, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-group:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(31, 42, 55, 0.12);
 }
 
 .skill-group h3 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid rgba(33, 77, 156, 0.15);
     font-size: 1.1rem;
 }
 
 .skill-group ul,
 .interest-list {
-    margin: 0;
-    padding-left: 1.25rem;
+    margin: 0 0 0 0.5rem;
+    padding-left: 1.5rem;
 }
 
 .interests-container {
