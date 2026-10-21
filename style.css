@@ -10,6 +10,7 @@
     --shadow: rgba(31, 42, 55, 0.18);
 }
 
+:root[data-theme="high-contrast"],
 body[data-theme="high-contrast"] {
     --sky: #0d0d0d;
     --sky-soft: #fff2b8;
