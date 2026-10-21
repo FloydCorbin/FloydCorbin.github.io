@@ -230,14 +230,16 @@ img:focus-visible {
 #quote,
 #author {
     margin: 0;
-    max-width: 42rem;
+    max-width: 100%;
+    width: 100%;
     font-weight: 700;
 }
 
 #quote {
     color: var(--formal-blue);
-    font-size: clamp(1.25rem, 2vw, 1.8rem);
-    line-height: 1.4;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    line-height: 1.55;
+    letter-spacing: 0.01em;
 }
 
 #quote::before {
@@ -245,27 +247,34 @@ img:focus-visible {
     font-size: 3rem;
     line-height: 0.5;
     vertical-align: text-bottom;
-    margin-right: 0.25rem;
+    margin-right: 0.3rem;
 }
 
 #author {
-    color: var(--formal-blue);
-    font-size: 1.05rem;
-    margin-top: 0.75rem;
+    color: var(--sky);
+    font-size: 1rem;
+    margin-top: 0.25rem;
+    text-align: right;
 }
 
 #author::before {
-    content: "- ";
+    content: "— ";
 }
 
 .quote-area {
     position: relative;
-    margin-top: 2rem;
-    padding: 2rem 1.5rem;
-    min-height: 200px;
-    background-color: var(--soft-brown);
+    width: min(100%, 56rem);
+    margin: 2.5rem auto 0;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.74), rgba(234, 241, 255, 0.7));
     border-radius: 1.5rem;
     border: 1px solid var(--border);
+    box-shadow: 0 14px 30px rgba(31, 42, 55, 0.08);
 }
 
 .contact-image {
