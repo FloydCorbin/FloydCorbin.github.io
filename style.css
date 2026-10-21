@@ -300,6 +300,48 @@ img:focus-visible {
     color: var(--formal-blue);
 }
 
+.case-study-list {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.case-study {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 10px 24px rgba(31, 42, 55, 0.06);
+}
+
+.case-study h3 {
+    margin-bottom: 1rem;
+    font-size: clamp(1.4rem, 2vw, 1.9rem);
+}
+
+.case-study dl {
+    margin: 0;
+}
+
+.case-study div {
+    margin-bottom: 1rem;
+}
+
+.case-study div:last-child {
+    margin-bottom: 0;
+}
+
+.case-study dt {
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+    color: var(--sky);
+}
+
+.case-study dd {
+    margin: 0;
+    padding-left: 0;
+}
+
 .under-construction-image {
     display: block;
     margin: 2rem auto 0;
