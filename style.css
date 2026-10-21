@@ -296,11 +296,13 @@ img:focus-visible {
 .skill-group,
 .quality-assurance,
 .pm-ba,
-.web-development {
+.web-development,
+.interests-container {
     min-width: 0;
 }
 
-.skill-group {
+.skill-group,
+.interests-container {
     padding: 1.35rem 1.35rem 0.75rem;
     border: 1px solid var(--border);
     border-radius: 1rem;
@@ -309,12 +311,14 @@ img:focus-visible {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.skill-group:hover {
+.skill-group:hover,
+.interests-container:hover {
     transform: translateY(-2px);
     box-shadow: 0 16px 30px rgba(31, 42, 55, 0.12);
 }
 
-.skill-group h3 {
+.skill-group h3,
+.interests-container h3 {
     margin-bottom: 0.8rem;
     padding-bottom: 0.45rem;
     border-bottom: 1px solid rgba(33, 77, 156, 0.15);
@@ -329,14 +333,27 @@ img:focus-visible {
 
 .interests-container {
     margin-top: 1.5rem;
-    padding: 1.25rem;
-    border: 1px solid var(--border);
-    border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.55);
 }
 
-.interests-container h3 {
-    margin-bottom: 0.5rem;
+.interest-list {
+    display: grid;
+    gap: 0.6rem;
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.6;
+}
+
+.interest-list li {
+    position: relative;
+    padding-left: 1.35rem;
+}
+
+.interest-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--sky);
+    font-weight: 700;
 }
 
 .portfolio-card {
