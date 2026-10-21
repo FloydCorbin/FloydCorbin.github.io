@@ -530,12 +530,43 @@ footer {
     }
 
     #highlighting-nav {
-        display: none;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    #highlighting-nav .nav {
+        flex: 1 1 auto;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scrollbar-width: thin;
+        padding: 0.5rem 0.75rem;
+    }
+
+    #highlighting-nav .nav::-webkit-scrollbar {
+        height: 0.4rem;
+    }
+
+    #highlighting-nav .nav::-webkit-scrollbar-thumb {
+        background: rgba(31, 42, 55, 0.35);
+        border-radius: 999px;
+    }
+
+    #highlighting-nav .nav-item {
+        flex: 0 0 auto;
+    }
+
+    #highlighting-nav .nav-link {
+        white-space: nowrap;
     }
 
     #mobile-nav {
-        display: block;
-        padding: 0.75rem clamp(1rem, 6vw, 2rem);
+        display: none;
     }
 
     .contact-image {
