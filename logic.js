@@ -102,22 +102,6 @@ $(function () {
 });
 
 
-// mobile nav
-function updateNavigationVisibility() {
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-  if (viewportWidth <= 768) {
-    $("#mobile-nav").show();
-    $("#highlighting-nav").hide();
-  } else {
-    $("#mobile-nav").hide();
-    $("#highlighting-nav").show();
-  }
-}
-
-window.addEventListener("resize", updateNavigationVisibility);
-window.addEventListener("load", updateNavigationVisibility);
-
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".current-year").forEach(function (yearElement) {
     yearElement.textContent = new Date().getFullYear();
