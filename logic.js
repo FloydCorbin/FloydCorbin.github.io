@@ -94,15 +94,10 @@ const stoicQuotes = [
   }
 ];
 
-if (stoicQuotes.length) {
-  var randomIndex = Math.floor(Math.random() * stoicQuotes.length);
-  var selectedQuote = stoicQuotes[randomIndex];
-  $("#quote").text(selectedQuote.quote);
-  $("#author").text(selectedQuote.author + " — " + selectedQuote.source);
-} else {
-  $("#quote").text("Stay curious, keep learning.");
-  $("#author").text("Floyd Corbin");
-}
+var randomIndex = Math.floor(Math.random() * stoicQuotes.length);
+var selectedQuote = stoicQuotes[randomIndex];
+$("#quote").text(selectedQuote.quote);
+$("#author").text(selectedQuote.author + " — " + selectedQuote.source);
 
 
 // mobile nav
