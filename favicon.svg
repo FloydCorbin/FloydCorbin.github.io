@@ -1,31 +1,31 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <title>Floyd Corbin favicon</title>
-  <desc>A stylized red F monogram with cyan accents.</desc>
+  <desc>A stylized red F monogram with a cyan looping path and circular accents.</desc>
   <defs>
     <linearGradient id="redFill" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#ff4d4d"/>
-      <stop offset="48%" stop-color="#ed1f33"/>
-      <stop offset="100%" stop-color="#b9121f"/>
+      <stop offset="0%" stop-color="#ff4a4a"/>
+      <stop offset="52%" stop-color="#f8062f"/>
+      <stop offset="100%" stop-color="#bf0d20"/>
     </linearGradient>
     <linearGradient id="cyanStroke" x1="0" x2="1" y1="0" y2="1">
-      <stop offset="0%" stop-color="#9ceeff"/>
-      <stop offset="50%" stop-color="#3ed8ff"/>
-      <stop offset="100%" stop-color="#13b8d8"/>
+      <stop offset="0%" stop-color="#a8efff"/>
+      <stop offset="50%" stop-color="#3bd9ff"/>
+      <stop offset="100%" stop-color="#12bfdc"/>
     </linearGradient>
   </defs>
 
   <rect width="512" height="512" fill="#050505"/>
 
   <path
-    d="M54 36 L54 480 H170 V330 H302 C375 330 420 295 438 248 C456 201 448 142 402 109 C358 79 300 82 246 112 L170 36 H54 Z"
+    d="M46 46 L46 466 H166 V322 H322 C398 322 444 278 444 216 C444 150 396 106 318 106 H166 V46 Z"
     fill="url(#redFill)"
-    stroke="#f8f8f8"
-    stroke-width="12"
+    stroke="#f4f4f4"
+    stroke-width="18"
     stroke-linejoin="round"
   />
 
   <path
-    d="M172 224 C208 178 264 158 315 166 C364 174 401 214 407 261 C413 312 387 351 344 378 C305 404 243 410 198 431"
+    d="M186 236 C218 178 272 150 331 157 C385 164 424 203 426 250 C428 296 399 333 354 358 C321 378 286 384 259 404 C228 430 202 459 186 480"
     fill="none"
     stroke="url(#cyanStroke)"
     stroke-width="22"
@@ -33,7 +33,7 @@
     stroke-linejoin="round"
   />
 
-  <circle cx="164" cy="223" r="38" fill="#1bbde7" stroke="#f7f7f7" stroke-width="10"/>
-  <circle cx="264" cy="168" r="38" fill="#1bbde7" stroke="#f7f7f7" stroke-width="10"/>
-  <circle cx="338" cy="330" r="38" fill="#1bbde7" stroke="#f7f7f7" stroke-width="10"/>
+  <circle cx="158" cy="232" r="36" fill="#21c7ef" stroke="#f7f7f7" stroke-width="12"/>
+  <circle cx="270" cy="160" r="36" fill="#21c7ef" stroke="#f7f7f7" stroke-width="12"/>
+  <circle cx="344" cy="344" r="36" fill="#21c7ef" stroke="#f7f7f7" stroke-width="12"/>
 </svg>
