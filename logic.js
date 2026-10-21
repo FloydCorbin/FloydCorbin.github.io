@@ -51,10 +51,10 @@ function updateNavigationVisibility() {
 
   if (viewportWidth <= 768) {
     $("#mobile-nav").show();
-    $("#highlighting_nav").hide();
+    $("#highlighting-nav").hide();
   } else {
     $("#mobile-nav").hide();
-    $("#highlighting_nav").show();
+    $("#highlighting-nav").show();
   }
 }
 
@@ -65,13 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".current-year").forEach(function (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   });
-
-  var storedTheme = localStorage.getItem("themePreference");
-  if (storedTheme === "high-contrast") {
-    document.body.setAttribute("data-theme", "high-contrast");
-  } else {
-    document.body.removeAttribute("data-theme");
-  }
 
   function updateContrastToggleState() {
     var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
@@ -86,10 +79,18 @@ document.addEventListener("DOMContentLoaded", function () {
     var isHighContrast = document.body.getAttribute("data-theme") === "high-contrast";
     if (isHighContrast) {
       document.body.removeAttribute("data-theme");
-      localStorage.removeItem("themePreference");
+      try {
+        localStorage.removeItem("themePreference");
+      } catch (error) {
+        // Ignore storage access errors when toggling off the theme.
+      }
     } else {
       document.body.setAttribute("data-theme", "high-contrast");
-      localStorage.setItem("themePreference", "high-contrast");
+      try {
+        localStorage.setItem("themePreference", "high-contrast");
+      } catch (error) {
+        // Ignore storage access errors when toggling on the theme.
+      }
     }
     updateContrastToggleState();
   }

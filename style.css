@@ -126,7 +126,7 @@ nav {
     border-bottom: 1px solid rgba(31, 42, 55, 0.08);
 }
 
-#highlighting_nav {
+#highlighting-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -503,7 +503,7 @@ footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    #highlighting_nav {
+    #highlighting-nav {
         display: none;
     }
 
