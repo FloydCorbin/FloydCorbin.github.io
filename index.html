@@ -25,19 +25,20 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div id="top">
 
-        <div class="header full-width">
-            <img class="profile-image" src="IMG_3437.jpg" alt="">
+        <header class="header full-width">
+            <img class="profile-image" src="IMG_3437.jpg" alt="Portrait of S. Floyd Corbin">
 
             <h1 class="page-title">S. Floyd Corbin</h1>
 
-        </div>
-        <nav id="highlighting_nav" class="full-width navbar sticky-top">
+        </header>
+        <nav id="highlighting_nav" class="full-width navbar sticky-top" aria-label="Primary navigation">
 
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link active" href="/index.html">Home</a>
+                    <a class="nav-link active" href="/index.html" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills_interests">Skills/Interests</a>
@@ -57,21 +58,21 @@
             <!-- Mobile -->
             <div id="mobile-nav" class="dropdown small-mobile">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2"
-                    data-bs-toggle="dropdown" aria-expanded="false">
+                    data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle navigation menu">
                     Menu
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                    <li><button class="dropdown-item" type="button">Home</button></li>
-                    <li><button class="dropdown-item" type="button">Skills/Interests</button></li>
-                    <li><button class="dropdown-item" type="button">Portfolio</button></li>
-                    <li><button class="dropdown-item" type="button">Contact</button></li>
-                    <li><button class="dropdown-item" type="button">Blog</button></li>
+                    <li><a class="dropdown-item" href="/index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="#skills_interests">Skills/Interests</a></li>
+                    <li><a class="dropdown-item" href="#portfolio">Portfolio</a></li>
+                    <li><a class="dropdown-item" href="#contact">Contact</a></li>
+                    <li><a class="dropdown-item" href="#blog">Blog</a></li>
                 </ul>
             </div>
 
         </nav>
     </div>
-    <div data-bs-spy="scroll" data-bs-target="#highlighting_nav" data-bs-offset="0" class="scrollspy main-content"
+    <main id="main-content" data-bs-spy="scroll" data-bs-target="#highlighting_nav" data-bs-offset="0" class="scrollspy main-content"
         tabindex="0">
         <section id="about">
             <h2>About</h2>
@@ -153,20 +154,20 @@
             <p>Here are some of the projects Floyd has worked on:</p>
             <div class="portfolio-container">
                 <div class="quality-assurance">
-                    <img class="portfolio-card" src="/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="">
+                    <img class="portfolio-card" src="/ales-nesetril-Im7lZjxeLhg-unsplash.jpg" alt="Abstract color photograph used as a visual cover for quality assurance work">
                     <h3 class="portfolio-card-title">Quality Assurance</h3>
                 </div>
                 <div class="pm-ba">
-                    <img class="portfolio-card" src="/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="">
+                    <img class="portfolio-card" src="/alexandre-debieve-FO7JIlwjOtU-unsplash.jpg" alt="Abstract blue-and-white architectural image used as a visual cover for project management and business analysis work">
                     <h3 class="portfolio-card-title">PM / BA</h3>
                 </div>
                 <div class="web-development">
-                    <img class="portfolio-card lead-card" src="/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="">
+                    <img class="portfolio-card lead-card" src="/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="A small dog beside a desk, used as a visual cover for development work">
                     <h3 class="portfolio-card-title">Development</h3>
                 </div>
             </div>
             <img class="under-construction-image" src="under-construction.png"
-                alt="image of teddybear holding sign which says 'under construction'">
+                alt="Teddy bear holding a sign that says under construction">
 
         </section>
         <section id="contact">
@@ -174,23 +175,23 @@
             <p>
                 Feel free to contact Floyd at:
                 <a href="mailto:floyd.corbin@gmail.com">floyd.corbin@gmail.com</a>
-                <img class="contact-image" src="https://via.placeholder.com/400x600" alt="placeholder">
-                <img class="under-construction-image" src="under-construction.png"
-                    alt="image of teddybear holding sign which says 'under construction'">
             </p>
+            <img class="contact-image" src="https://via.placeholder.com/400x600" alt="Placeholder contact image for a future profile photo">
+            <img class="under-construction-image" src="under-construction.png"
+                alt="Teddy bear holding a sign that says under construction">
 
         </section>
         <section id="blog">
             <h2>Blog</h2>
             <img class="under-construction-image" src="under-construction.png"
-                alt="image of teddybear holding sign which says 'under construction'">
+                alt="Teddy bear holding a sign that says under construction">
             <footer>
 
-                <p class="copywright">Copywright 2023 </p>
+                <p class="copywright">Copyright 2023</p>
 
             </footer>
         </section>
-    </div>
+    </main>
 
 </body>
 

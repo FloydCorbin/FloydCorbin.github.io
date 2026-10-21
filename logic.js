@@ -37,17 +37,17 @@ $.ajax({
 
 
 // mobile nav
-document.onresize = function () {
-  if (visualViewport.width <= 320) {
+function updateNavigationVisibility() {
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (viewportWidth <= 320) {
     $("#mobile-nav").show();
-    $("#highlighting-nav").hide();
-    
+    $("#highlighting_nav").hide();
   } else {
     $("#mobile-nav").hide();
-    $("#highlighting-nav").show();
+    $("#highlighting_nav").show();
   }
+}
 
-  // $("#mobile-nav").click(function () {
-  //   $("#highlighting-nav").toggle();
-  // });
-};
+window.addEventListener("resize", updateNavigationVisibility);
+window.addEventListener("load", updateNavigationVisibility);

@@ -16,24 +16,43 @@
 
 
 html {
-    box-sizing: content-box;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-/* Hide scrollbar for Chrome, Safari (didn't work) and Opera */
-body::-webkit-scrollbar {
-    display: none;
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
 body {
-    /* IE and Edge */
-    -ms-overflow-style: none;
-    /* Firefox */
-    scrollbar-width: none;
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
     position: relative;
     min-height: 200px;
     background-color: var(--white);
+    color: var(--formal-blue);
+    line-height: 1.6;
+    font-size: 16px;
+}
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 1000;
+    background: var(--formal-blue);
+    color: var(--white);
+    padding: 0.75rem 1rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.skip-link:focus {
+    left: 1rem;
 }
 
 /* Desktop style */
@@ -134,17 +153,30 @@ nav {
 .nav-link {
     color: var(--formal-blue);
     font-weight: 600;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-link.active {
     background-color: var(--sky);
-    !important;
-
+    color: var(--white);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
     color: var(--sky);
     text-shadow: #eeeeee 2px 0px 5px;
+    outline: 3px solid transparent;
+}
+
+.nav-link:focus-visible,
+button:focus-visible,
+a:focus-visible,
+img:focus-visible {
+    outline: 3px solid var(--formal-blue);
+    outline-offset: 3px;
 }
 
 ul.nav {
@@ -175,15 +207,16 @@ p {
 
 
 h1 {
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: bold;
     color: white;
 }
 
-h2 h3 h4 {
+h2, h3, h4 {
     position: relative;
     margin-top: 40px;
-    padding: 40px, 20px, 5px, 10px;
+    padding: 40px 20px 5px 10px;
+    color: var(--formal-blue);
 }
 
 .portfolio-card-title {
@@ -197,15 +230,15 @@ h2 h3 h4 {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 30%;
+    position: relative;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    text-align: center;
 }
 
 .copywright {
     position: relative;
-    bottom: 0;
-    left: 50%;
+    margin: 0;
 }
 
 
@@ -419,9 +452,22 @@ footer {
         overflow-y: scroll;
     }
 
- .small-mobile  {
-    display: none;
- }
+    .small-mobile {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 
