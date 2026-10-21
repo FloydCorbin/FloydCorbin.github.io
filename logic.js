@@ -94,10 +94,12 @@ const stoicQuotes = [
   }
 ];
 
-var randomIndex = Math.floor(Math.random() * stoicQuotes.length);
-var selectedQuote = stoicQuotes[randomIndex];
-$("#quote").text(selectedQuote.quote);
-$("#author").text(selectedQuote.author + " — " + selectedQuote.source);
+$(function () {
+  var randomIndex = Math.floor(Math.random() * stoicQuotes.length);
+  var selectedQuote = stoicQuotes[randomIndex];
+  $("#quote").text(selectedQuote.quote);
+  $("#author").text(selectedQuote.author + " — " + selectedQuote.source);
+});
 
 
 // mobile nav
