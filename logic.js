@@ -51,3 +51,9 @@ function updateNavigationVisibility() {
 
 window.addEventListener("resize", updateNavigationVisibility);
 window.addEventListener("load", updateNavigationVisibility);
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".current-year").forEach(function (yearElement) {
+    yearElement.textContent = new Date().getFullYear();
+  });
+});

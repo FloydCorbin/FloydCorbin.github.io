@@ -225,13 +225,7 @@ img:focus-visible {
 }
 
 .contact-image {
-    float: right;
-    display: block;
-    max-width: 300px;
-    width: 100%;
-    margin: 0 0 1rem 1rem;
-    border-radius: 1rem;
-    border: 2px solid var(--formal-blue);
+    display: none;
 }
 
 .scrollspy {
