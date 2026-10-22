@@ -1,7 +1,7 @@
 :root {
-    --sky: #214d9c;
-    --sky-soft: #eaf1ff;
-    --golden: #f0c95c;
+    --sky: #E65751;
+    --sky-soft: #FDE7E6;
+    --golden: #B9BAA2;
     --formal-blue: #1f2a37;
     --soft-brown: #e7dfc2;
     --white: #f5f7fb;
@@ -160,7 +160,7 @@ nav {
 
 .nav-link:hover,
 .nav-link:focus-visible {
-    background-color: rgba(33, 77, 156, 0.12);
+    background-color: rgba(230, 87, 81, 0.12);
     color: var(--sky);
     box-shadow: 0 0 0 3px transparent;
 }
@@ -330,7 +330,7 @@ img:focus-visible {
 .interests-container h3 {
     margin-bottom: 0.8rem;
     padding-bottom: 0.45rem;
-    border-bottom: 1px solid rgba(33, 77, 156, 0.15);
+    border-bottom: 1px solid rgba(230, 87, 81, 0.15);
     font-size: 1.1rem;
 }
 
